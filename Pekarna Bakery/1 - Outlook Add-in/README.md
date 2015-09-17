@@ -151,7 +151,7 @@ Výsledná struktura by měla vypadat takto:
 Standardně uživatelé získávají aplikace z [Office Storu](https://store.office.com). Vývojáři mohou pro testování použít Visual Studio (prosté spuštění projektu zajistí instalaci na server a otevření prohlížeče) nebo add-in nahrát do mailboxu uživatele ručně.
 
 1. Otevřete prohlížeč (ideálně privátní okno bez cookies).
-1. Přejděte na adresu: https://outlook.office.com/ecp/ a přihlašte se svým účtem *<user>*@*<tenant>*.onmicrosoft.com.
+1. Přejděte na adresu: https://outlook.office.com/ecp/ a přihlašte se svým účtem *user*@*tenant*.onmicrosoft.com.
 
 	![](Images/outlook-sideload1.png)
 
