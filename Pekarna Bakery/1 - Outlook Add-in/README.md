@@ -133,6 +133,9 @@ Jakmile máme manifest hotový, začneme sestavovat samotnou funkctionalitu apli
 	* `displayOrderDetails` se podívá do těla e-mailu a přečte z něj hodnotu, která odpovídá nastavenému regulárnímu výrazu. Výsledky jsou v poli, protože jich e-mail může obsahovat víc. My si vezmeme hned ten první.
 	* Pro jednoduchost se skript nepřipojuje nikam na backend, ale jednoduše vypisuje staticky stav. V reálné aplikaci by zavolal na server a zjistil aktuální stav objednávky.
 
+1. Nahrajte všechny soubory webu na webhosting (např. Azure).
+1. V souboru **DemoBakery.manifest.xml** nahraďte `<URL>` skutečnou adresou vašeho webu. Aplikace musí běžet na protokolu **HTTPS**.
+
 ### Podpůrné soubory
 Tímto máme jádro aplikace hotové a ještě doplníme podpůrné soubory, které jsou pro její správný běh nutné.
 
@@ -145,3 +148,29 @@ Výsledná struktura by měla vypadat takto:
 ![](Images/struktura.png)
 
 ## Nasazení aplikace na server
+Standardně uživatelé získávají aplikace z [Office Storu](https://store.office.com). Vývojáři mohou pro testování použít Visual Studio (prosté spuštění projektu zajistí instalaci na server a otevření prohlížeče) nebo add-in nahrát do mailboxu uživatele ručně.
+
+1. Otevřete prohlížeč (ideálně privátní okno bez cookies).
+1. Přejděte na adresu: https://outlook.office.com/ecp/ a přihlašte se svým účtem *<user>*@*<tenant>*.onmicrosoft.com.
+
+	![](Images/outlook-sideload1.png)
+
+1. Zvolte **Doplňky** (anglicky Add-ins).
+1. Klikněte na tlačítko "**+**" nad seznamem doplňků.
+
+	![](Images/outlook-sideload2.png)
+
+1. Zvolte **Přidat ze souboru**.
+1. Najděte na disku soubor **DemoBakery.manifest.xml**, který jsme vytvořili dříve, zvolte ho k uploadu (může se lišit podle prohlížeče) a klikněte na **Další**.
+
+	![](Images/outlook-sideload3.png)
+	
+1. Add-in se tímto nainstaloval pro schránku daného uživatele - měli byste ho vidět v seznamu.
+
+	![](Images/outlook-sideload4.png)
+	
+*Při přidávání se kontroluje, zda je manifest správný a zda odkazuje na URL adresu, která běží na HTTPS.*
+
+Jakmile nyní přijde e-mail s ID objednávky naší pekárny, add-in se automaticky aktivuje a nechá uživatele na ID kliknout.
+
+![](Images/outlook-sideload5.png)
