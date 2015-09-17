@@ -68,14 +68,17 @@ Minimální add-in pro Office tvoří vždy soubor manifestu (XML) a webová apl
 		<DisableEntityHighlighting>false</DisableEntityHighlighting>
 	</OfficeApp>
 	```
+	
 	* Nastavujeme základní informace o aplikaci, které se zobrazí uživateli, a také specifikujeme, že se aplikace týká mailboxu, konkrétně čtení (`ItemRead`).
 	* Podstatná je také sekce **`Rule`** - říkáme, že položka musí být e-mail *a* že v něm musí být text, který odpovídá regulárnímu výrazu `#BAKID:(.*){36}`. Výraz máme pojmenovaný jako `BAKID`.
 
 *Dokumentaci k souboru manifestu najdete zde: https://msdn.microsoft.com/en-us/library/office/fp161044.aspx.*
 
 Jakmile máme manifest hotový, začneme sestavovat samotnou funkctionalitu aplikace. Bude ji tvořit jednoduchá webová stránka bez serverové části.
+
 1. Vytvořte ve své složce vedle manifestu nový prázdný soubor **order.html**.
 1. Vložte do něj tento HTML kód:
+	
 	```html
 	<!DOCTYPE html>
 	<html>
@@ -100,10 +103,13 @@ Jakmile máme manifest hotový, začneme sestavovat samotnou funkctionalitu apli
 		</body>
 		</html>
 	```
-	* Podstatné v tomto souboru je načtení **office.js** z CDN. Díky tomuto skriptu je možné vkládat aplikace do Office a pracovat s obsahem (dokumenty, e-maily, kalendářem...).
+	
+* Podstatné v tomto souboru je načtení **office.js** z CDN. Díky tomuto skriptu je možné vkládat aplikace do Office a pracovat s obsahem (dokumenty, e-maily, kalendářem...).
+
 1. Vytvořte ve stejném adresáři složku **js**.
 1. Vytvořte v ní prázdný soubor **order.js**.
 1. Vložte do něj tento kód:
+	
 	```js
 	(function () {
 		"use strict";
@@ -122,6 +128,7 @@ Jakmile máme manifest hotový, začneme sestavovat samotnou funkctionalitu apli
 		}
 	})();
 	```
+	
 	* Skript se zapojí do inicializace Office a přidá volání jedné funkce. Z toho důvodu je nutné ho volat až po načtení *Office.js*.
 	* `displayOrderDetails` se podívá do těla e-mailu a přečte z něj hodnotu, která odpovídá nastavenému regulárnímu výrazu. Výsledky jsou v poli, protože jich e-mail může obsahovat víc. My si vezmeme hned ten první.
 	* Pro jednoduchost se skript nepřipojuje nikam na backend, ale jednoduše vypisuje staticky stav. V reálné aplikaci by zavolal na server a zjistil aktuální stav objednávky.
