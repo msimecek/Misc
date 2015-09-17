@@ -104,7 +104,7 @@ Jakmile máme manifest hotový, začneme sestavovat samotnou funkctionalitu apli
 		</html>
 	```
 	
-* Podstatné v tomto souboru je načtení **office.js** z CDN. Díky tomuto skriptu je možné vkládat aplikace do Office a pracovat s obsahem (dokumenty, e-maily, kalendářem...).
+	* Podstatné v tomto souboru je načtení **office.js** z CDN. Díky tomuto skriptu je možné vkládat aplikace do Office a pracovat s obsahem (dokumenty, e-maily, kalendářem...).
 
 1. Vytvořte ve stejném adresáři složku **js**.
 1. Vytvořte v ní prázdný soubor **order.js**.
