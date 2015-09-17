@@ -26,9 +26,11 @@ Jako první vytvoříme jednoduchý add-in pro Outlook bez Visual Studia. Vysta�
 
 ### Jádro aplikace
 Minimální add-in pro Office tvoří vždy soubor manifestu (XML) a webová aplikace. Oboje umí vygenerovat Visual Studio automaticky, protože ho ale nepoužíváme, použijeme již hotový kód:
+
 1. Založte si **novou složku**, v které budete aplikaci tvořit.
 1. Vytvořte nový prázdný soubor a pojmenujte ho **DemoBakery.manifest.xml** (název může být libovolný, tento volíme hlavně pro přehlednost).
 1. Vložte do něj následující XML:
+
 	```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MailApp">
