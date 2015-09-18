@@ -18,11 +18,11 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://<URL>.azurewebsites.net/order.html"/>
+        <SourceLocation DefaultValue="https://<URL>/order.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
       <TabletSettings>
-        <SourceLocation DefaultValue="https://<URL>.azurewebsites.net/order.html" />
+        <SourceLocation DefaultValue="https://<URL>/order.html" />
         <RequestedHeight>150</RequestedHeight>
       </TabletSettings>
     </Form>
