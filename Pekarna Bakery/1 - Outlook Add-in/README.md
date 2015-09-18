@@ -133,9 +133,6 @@ Jakmile máme manifest hotový, začneme sestavovat samotnou funkctionalitu apli
 	* `displayOrderDetails` se podívá do těla e-mailu a přečte z něj hodnotu, která odpovídá nastavenému regulárnímu výrazu. Výsledky jsou v poli, protože jich e-mail může obsahovat víc. My si vezmeme hned ten první.
 	* Pro jednoduchost se skript nepřipojuje nikam na backend, ale jednoduše vypisuje staticky stav. V reálné aplikaci by zavolal na server a zjistil aktuální stav objednávky.
 
-1. Nahrajte všechny soubory webu na webhosting (např. Azure).
-1. V souboru **DemoBakery.manifest.xml** nahraďte `<URL>` skutečnou adresou vašeho webu. Aplikace musí běžet na protokolu **HTTPS**.
-
 ### Podpůrné soubory
 Tímto máme jádro aplikace hotové a ještě doplníme podpůrné soubory, které jsou pro její správný běh nutné.
 
@@ -146,6 +143,9 @@ Tímto máme jádro aplikace hotové a ještě doplníme podpůrné soubory, kte
 Výsledná struktura by měla vypadat takto:
 
 ![](Images/struktura.png)
+
+1. Nahrajte všechny soubory webu na webhosting (např. Azure).
+1. V souboru **DemoBakery.manifest.xml** nahraďte `<URL>` skutečnou adresou vašeho webu. Aplikace musí běžet na protokolu **HTTPS**.
 
 ## Nasazení aplikace na server
 Standardně uživatelé získávají aplikace z [Office Storu](https://store.office.com). Vývojáři mohou pro testování použít Visual Studio (prosté spuštění projektu zajistí instalaci na server a otevření prohlížeče) nebo add-in nahrát do mailboxu uživatele ručně.
