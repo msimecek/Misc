@@ -25,7 +25,7 @@ Hodnoty `WebMail.UserName` a `WebMail.From` musí být stejné. Nastavení odli�
 Jako první vytvoříme jednoduchý add-in pro Outlook bez Visual Studia. Vystačíme si s textovým editorem a trochou HTML a JavaScriptu.
 
 ### Jádro aplikace
-Minimální add-in pro Office tvoří vždy soubor manifestu (XML) a webová aplikace. Oboje umí vygenerovat Visual Studio automaticky, protože ho ale nepoužíváme, použijeme již hotový kód:
+Minimální add-in pro Office tvoří vždy soubor manifestu (XML) a webová aplikace. Oboje vytvoříme v textovém editoru vlastnoručně.
 
 1. Založte si **novou složku**, v které budete aplikaci tvořit.
 1. Vytvořte nový prázdný soubor a pojmenujte ho **DemoBakery.manifest.xml** (název může být libovolný, tento volíme hlavně pro přehlednost).
