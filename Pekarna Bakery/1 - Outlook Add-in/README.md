@@ -87,7 +87,6 @@ Jakmile máme manifest hotový, začneme sestavovat samotnou funkctionalitu apli
 			<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 			<title></title>
 			<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-			<link href="css/Office.css" rel="stylesheet" type="text/css" />
 			<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
 			<script src="js/order.js" type="text/javascript"></script>
 			<link href="css/Site.css" rel="stylesheet" type="text/css" />
@@ -137,8 +136,8 @@ Jakmile máme manifest hotový, začneme sestavovat samotnou funkctionalitu apli
 Tímto máme jádro aplikace hotové a ještě doplníme podpůrné soubory, které jsou pro její správný běh nutné.
 
 1. Do složky **js** zkopírujte soubor **jquery-1.8.2.min.js** z projektu Web-Start (složka *Scripts*).
-1. Vytvořte novou složku **css** a zkopírujte do ní soubory **Office.css** a **Site.css** z projektu Web-Start (složka *Content*).
-1. Vytvořte novou složku **images** a zkopírujte do ní soubory **bkg.png**, **brand.png** a **Close.png**.
+1. Vytvořte novou složku **css** a zkopírujte do ní soubor **Site.css** z projektu Web-Start (složka *Content*).
+1. Vytvořte novou složku **images** a zkopírujte do ní soubory **bkg.png** a **brand.png**.
 
 Výsledná struktura by měla vypadat takto:
 
