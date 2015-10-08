@@ -42,9 +42,9 @@
         WebMail.EnableSsl = true;
 
         //Enter your Office 365 credentials for UserName/Password and a "From" address for the e-mail
-        WebMail.UserName = "<username>@<tenant>.onmicrosoft.com";
-        WebMail.Password = "<password>";
-        WebMail.From = "<username>@<tenant>.onmicrosoft.com";
+        WebMail.UserName = System.Configuration.ConfigurationManager.AppSettings["Mail.Username"];
+        WebMail.Password = System.Configuration.ConfigurationManager.AppSettings["Mail.Password"];
+        WebMail.From = System.Configuration.ConfigurationManager.AppSettings["Mail.From"];
 
         if (WebMail.UserName.IsEmpty() || WebMail.Password.IsEmpty() || WebMail.From.IsEmpty()) {
             Response.Redirect("~/OrderSuccess?NoEmail=1");
